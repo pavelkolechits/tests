@@ -1,0 +1,5 @@
+.outlet {
+    min-height: calc(100vh - var(--menubarHeight) - var(--footerHeight));
+    padding: 30px 5px 10px 10px;
+    background-image: url(../background/Background.tsx);
+}

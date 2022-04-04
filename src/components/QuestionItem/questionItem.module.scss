@@ -1,0 +1,32 @@
+
+
+.wrap{
+    background-color: inherit;
+    margin: 10px 0 0 0 ;
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    &::marker{
+        color: #fff;
+    }
+}
+
+.answer{
+ 
+    font-size: 15px;
+   
+}
+.answer-wrap{
+    display: flex;
+}
+
+.checkbox{
+    margin: 0 20px 0 0 ;
+    font-size: 15px;
+
+}
+
