@@ -4,27 +4,28 @@
 .container {
     width:70vw ;
     height: 100%;
-    margin: auto;
+    margin: 50px auto;
     padding: 1rem;
     border-radius: 7px;
+
 
  
 
 }
 
 .input{
-    width: 100%;
+   width: 100%;
     border: none;
     border-bottom: 1px solid #198754;
     outline: none;
     background-color:#00000000;
     padding: 0 0 0 7px;
-  
+
     color:#fff;
 
     
     &:focus{
-        width: 100%;
+        
         border-bottom: 1px solid #198754;
         padding: 0 0 0 7px;
         box-shadow:none;
@@ -32,10 +33,16 @@
 
 }
 .form{
-    width: 100%;
+    width: 70vw;
     display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 140px;
 }
 .button{
+   
     outline: none;
     border:none;
     background-color: #00000000;
@@ -50,4 +57,29 @@
 .questionItem{
     font-size: 20px;
     color: #fff;
+}
+.hidden{
+    display: none;
+}
+
+.back-button{
+    position: fixed;
+    top: 90px;
+    left: 100px;
+}
+.create-button{
+    position: fixed;
+    top: 90px;
+}
+.hidden-content{
+    width:70vw ;
+    height: 300px;
+    margin:  auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    opacity: .5;
+    z-index: 100;
+
+
 }

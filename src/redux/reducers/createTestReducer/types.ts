@@ -5,7 +5,10 @@ export enum createTestActionTypes {
   DELETE_ANSWER = "DELETE_ANSWER",
   EDIT_QUESTION = "EDIT_QUESTION",
   EDIT_ANSWER = "EDIT_ANSWER",
-  SELECT_ANSWER = "SELECT_ANSWER"
+  SELECT_ANSWER = "SELECT_ANSWER",
+  RELOAD = 'RELOAD',
+  SAVE_TEST = 'SAVE_TEST',
+  RESET_STATE = 'RESET_STATE'
 }
 
 export interface AnswerItem {
@@ -13,11 +16,22 @@ export interface AnswerItem {
   isCorrect: boolean;
   answerId: string;
 }
+interface ResetStateAction {
+  type: createTestActionTypes.RESET_STATE
+}
+
+interface SaveTest {
+  type: createTestActionTypes.SAVE_TEST,
+  payload: {test: Array<QuestionItem>, testName: string }
+}
 
 export interface QuestionItem {
   id: string;
   question: string;
   answers: Array<AnswerItem>;
+}
+interface ReloadAction {
+  type: createTestActionTypes.RELOAD
 }
 interface SelectAnswerAction{
   type: createTestActionTypes.SELECT_ANSWER;
@@ -58,5 +72,8 @@ export type createTestReducerAction =
   | EditQuestionAction
   | EditAnswerAction
   | SelectAnswerAction
+  | ReloadAction
+  | SaveTest
+  | ResetStateAction
 
 export type createTestReducerState = { questions: Array<QuestionItem> | [] };

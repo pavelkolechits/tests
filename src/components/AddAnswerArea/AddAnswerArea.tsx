@@ -4,7 +4,7 @@ import styles from "./addAnsverArea.module.scss";
 import {useState} from 'react'
 import {createTestActionTypes} from '../../redux/reducers/createTestReducer/types'
 import {useDispatch} from 'react-redux'
-import nextId from "react-id-generator";
+// import nextId from "react-id-generator";
 
 
 
@@ -13,7 +13,9 @@ interface AddAnswerAreaProps {
   itemId: string;
   
 }
-
+function getID() {
+	return '_' + Math.random().toString(36).substr(2, 9);
+}
 
 
 export const AddAnswerArea: FC<AddAnswerAreaProps> = ({handleCloseArea, itemId}) => {
@@ -28,7 +30,7 @@ const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
   setValue(event.target.value)
 }
 const handleAddAnswer = () => {
-  dispatch({type: createTestActionTypes.CREATE_ANSWER, payload: {answer: value, id: itemId, answerId: `answer-${nextId()}`}})
+  dispatch({type: createTestActionTypes.CREATE_ANSWER, payload: {answer: value, id: itemId, answerId: getID()}})
   handleCloseArea()
 }
 

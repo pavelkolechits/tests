@@ -16,24 +16,32 @@ export const AnswerItemList: FC<AnswerItemListProps> = ({
   item,
   questionId,
 }) => {
-  const [isCorrect, setIsCorrect] = useState<boolean>(true);
   const dispatch = useDispatch();
   const [showEditArea, setShowEditArea] = useState<boolean>(false);
+  
   const handleShowEditArea = () => {
     setShowEditArea(true);
   };
   const handleCloseEditArea = () => {
     setShowEditArea(false);
-  };
-  const handleCheck = () => {
     
+  };
+
+
+
+  const handleCheck = () => {
+   
     dispatch({
       type: createTestActionTypes.SELECT_ANSWER,
-      payload: {  isCorrect, questionId, answerId: item.answerId },
+      payload: {  questionId, answerId: item.answerId },
     });
-    setIsCorrect(!isCorrect);
-    console.log(isCorrect)
+  
+  
   };
+
+
+
+
   const handleDeleteAnswer = () => {
     dispatch({
       type: createTestActionTypes.DELETE_ANSWER,
@@ -45,7 +53,7 @@ export const AnswerItemList: FC<AnswerItemListProps> = ({
       {!showEditArea && (
         <Form.Check
           onChange={handleCheck}
-          checked={!isCorrect}
+          checked={item.isCorrect}
           type="checkbox"
           className={styles.checkbox}
         />
