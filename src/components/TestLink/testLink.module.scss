@@ -2,7 +2,12 @@
     color: #fff;
     font-size: 25px;
     text-decoration: none;
+    transition: all 100ms linear;
+
     &:hover{
-        color: #ccc;
+       
+        letter-spacing: .6px;
+        color: #19875490;
+        text-shadow: 1px 1px 1px #ffffff90;
     }
 }

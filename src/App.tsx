@@ -8,15 +8,10 @@ import { Background } from "./components/background/Background";
 import { StartTestPage } from "./pages/StartTestPage/StartTestPage";
 import  {useDispatch} from 'react-redux'
 import {createTestActionTypes} from './redux/reducers/createTestReducer/types'
-import { manageTestsActionTypes } from "./redux/reducers/manageTestsReducer/types";
 import { Test } from "./pages/Test/Test";
 
 export const App: FC = () => {
-  const dispatch = useDispatch()
-    useEffect(() => {
-    dispatch({type: createTestActionTypes.RELOAD})
-    dispatch({type: manageTestsActionTypes.RELOAD})
-  },[])
+
   return (
     <>
     

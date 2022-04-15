@@ -104,6 +104,7 @@ export const createTestReducer = (
       return { ...state, questions: newQuestions };
     }
     case createTestActionTypes.RELOAD: {
+      
       let newQustions = JSON.parse(localStorage.getItem("createTest") || "");
 
       return { ...state, questions: [...(state.questions = newQustions)] };
