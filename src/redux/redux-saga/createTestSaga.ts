@@ -2,6 +2,7 @@ import { put, takeEvery, call } from "@redux-saga/core/effects";
 import { AxiosResponse } from "axios";
 import { QuestionItem } from "../../components/QuestionItem/QuestionItem";
 import { manageTestsActionTypes } from "../reducers/manageTestsReducer/types";
+import { getUserDataActionTypes } from "../reducers/getUserDataReducer/types";
 import axios from "axios";
 
 
@@ -14,6 +15,7 @@ import axios from "axios";
 function* getTestsData():Generator {
   const response =  yield call(() => axios.get<AxiosResponse>("http://localhost:8000/tests").then((i: AxiosResponse) => i.data))
   yield put({type: manageTestsActionTypes.GET_TESTS_DATA_SUCCESS, payload: response})
+  yield put({type: getUserDataActionTypes.GET_TESTS_DATA_SUCCESS, payload: response})
   
 }
 

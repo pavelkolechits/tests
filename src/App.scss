@@ -8,7 +8,7 @@
 }
 #root{
     background-image: url(../src/components/background/Background.tsx);
-
+ 
    
     // width: fit-content;
     // height: fit-content;
@@ -20,7 +20,7 @@ body {
     font-size: medium;
     padding: var(--menubarHeight) 0 0 0;
   
-    overflow-x:hidden ;
+ 
 
     &::-webkit-scrollbar {
         width: 5px;
@@ -71,11 +71,13 @@ body {
 }
 
 .form-control {
-
+    padding: 5px;
     border-color: #198754;
     resize: none;
     background-color: #12120b8f;
     color: #fff;
+    font-size: 15px;
+  
 
     &:focus {
         box-shadow:  0 0 0.25rem #036d3350;
@@ -103,4 +105,7 @@ body {
 }
 button{
     font-size: 15px;
+}
+.mb-3{
+    margin: 0 !important;
 }

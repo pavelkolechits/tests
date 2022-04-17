@@ -4,7 +4,7 @@ import { TestLink } from "../../components/TestLink/TestLink";
 import { manageTestsActionTypes } from "../../redux/reducers/manageTestsReducer/types";
 import { useDispatch } from "react-redux";
 import style from "./startTestPage.module.scss";
-
+import { getUserDataActionTypes } from "../../redux/reducers/getUserDataReducer/types";
 export const StartTestPage: FC = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -12,6 +12,11 @@ export const StartTestPage: FC = () => {
   }, []);
   const state = useTypedSelector((i) => i.manageTestsReducer);
 
+  const getTestsData = (id: string) => {
+    
+    dispatch({type: getUserDataActionTypes.CHOOSE_TEST, payload: id})
+    dispatch({type: getUserDataActionTypes.RESET_STATE })
+  }
   return (
     <ul className={style.testList}>
       {state.map((i) => (
@@ -20,7 +25,7 @@ export const StartTestPage: FC = () => {
           className={style.testItem}
           
         >
-          <TestLink id={i.testName}>{i.testName}</TestLink>
+          <TestLink onClick={() => getTestsData(i.id)} id={i.testName}>{i.testName}</TestLink>
         </li>
       ))}
     </ul>

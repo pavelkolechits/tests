@@ -4,17 +4,17 @@ import { createTestReducer } from "./reducers/createTestReducer/createTestReduce
 import { manageTestsReducer } from "./reducers/manageTestsReducer/manageTestsReducer";
 import createSagaMiddleware from "redux-saga";
 import { createTestSagaWatcher } from "./redux-saga/createTestSaga";
+import { getUserDataReducer } from "./reducers/getUserDataReducer/getUserDataReducer";
 
 const sagaMiddleware = createSagaMiddleware();
 
+const reducers = { createTestReducer, manageTestsReducer, getUserDataReducer };
 
 export const store = createStore(
-  combineReducers({ createTestReducer, manageTestsReducer }),
+  combineReducers(reducers),
   composeWithDevTools(applyMiddleware(sagaMiddleware))
 );
 
-
 export type RootState = ReturnType<typeof store.getState>;
 
-
-sagaMiddleware.run(createTestSagaWatcher)
+sagaMiddleware.run(createTestSagaWatcher);

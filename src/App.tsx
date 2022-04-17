@@ -16,7 +16,6 @@ export const App: FC = () => {
     <>
     
       <Routes>
-     
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="/test/:id" element={<Test/>}/>

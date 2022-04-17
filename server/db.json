@@ -1,92 +1,137 @@
 {
   "tests": [
+
     {
       "test": [
         {
-          "id": "_55uiu609b",
-          "question": "qwert",
+          "id": "_llgcy4b2a",
+          "question": "После какого HTML тега нужно вставить JavaScript?",
           "answers": [
             {
-              "answer": "etgetgetg",
-              "isCorrect": true,
-              "answerId": "_g4eac50nd"
+              "answer": "<js>",
+              "isCorrect": false,
+              "answerId": "_afkc5g5rb"
             },
             {
-              "answer": "egetgetgetg",
+              "answer": " <javascript>",
               "isCorrect": false,
-              "answerId": "_ms8z6b9wj"
+              "answerId": "_uvidbyzpl"
+            },
+            {
+              "answer": "<scripting>",
+              "isCorrect": false,
+              "answerId": "_0x26udvzy"
+            },
+            {
+              "answer": "<script>",
+              "isCorrect": true,
+              "answerId": "_x34ly4pfk"
             }
           ]
         },
         {
-          "id": "_8nivsp0qj",
-          "question": "etgtegt",
+          "id": "_pcydynhew",
+          "question": "JavaScript и Java это одно и тоже?",
           "answers": [
             {
-              "answer": "etgetg",
+              "answer": "Да",
               "isCorrect": false,
-              "answerId": "_xuqo3cpru"
+              "answerId": "_k3yuenixr"
             },
             {
-              "answer": "etgetgetg",
+              "answer": "Нет",
               "isCorrect": true,
-              "answerId": "_fhlxx5mk1"
+              "answerId": "_gqnk6d4fq"
             }
           ]
         },
         {
-          "id": "_xde8ayqap",
-          "question": "etgteget",
+          "id": "_l7h2h7y9g",
+          "question": " В каком разделе можно вставить JavaScript?",
           "answers": [
             {
-              "answer": "etgetget",
+              "answer": "<head>",
               "isCorrect": false,
-              "answerId": "_t09g3a780"
+              "answerId": "_ma2ybqa3u"
             },
             {
-              "answer": "etgtetget",
+              "answer": "<head> и <body>",
               "isCorrect": true,
-              "answerId": "_ob4mercjn"
+              "answerId": "_wogsg745z"
+            },
+            {
+              "answer": "<body>",
+              "isCorrect": false,
+              "answerId": "_5wwna7wm3"
             }
           ]
         },
         {
-          "id": "_k9olndz3s",
-          "question": "etgteg",
+          "id": "_s90rf0ch8",
+          "question": "Как правильно вставить внешний скрипт?",
           "answers": [
             {
-              "answer": "errg",
-              "isCorrect": false,
-              "answerId": "_9idvi0kuc"
+              "answer": "<script src='sample1.js'>",
+              "isCorrect": true,
+              "answerId": "_6ny3hxlhy"
             },
             {
-              "answer": "errgerg",
+              "answer": "<#include 'sample1.js'>",
               "isCorrect": false,
-              "answerId": "_eqosmmyna"
+              "answerId": "_ibdkica5p"
+            },
+            {
+              "answer": "<script name='sample1.js'>",
+              "isCorrect": false,
+              "answerId": "_e8ofjx3cf"
+            },
+            {
+              "answer": "<script href='sample1.js'>",
+              "isCorrect": false,
+              "answerId": "_94veupuc7"
             }
           ]
         },
         {
-          "id": "_5jkbs2hk1",
-          "question": "etgetg",
+          "id": "_bhn94mq9t",
+          "question": "Внешний JavaScript файл должен содержать <script> тег?",
           "answers": [
             {
-              "answer": "erer",
-              "isCorrect": false,
-              "answerId": "_8be8g3zd6"
+              "answer": "Да",
+              "isCorrect": true,
+              "answerId": "_636l8bxf7"
             },
             {
-              "answer": "erer",
+              "answer": "Нет",
+              "isCorrect": false,
+              "answerId": "_gm8ho273e"
+            }
+          ]
+        },
+        {
+          "id": "_y0h9si741",
+          "question": " Какой правильный способ для комментария в JavaScript?",
+          "answers": [
+            {
+              "answer": "// Это комментарий.",
               "isCorrect": true,
-              "answerId": "_rds726udc"
+              "answerId": "_ug55c5y5s"
+            },
+            {
+              "answer": "<!-- Это комментарий. -->",
+              "isCorrect": false,
+              "answerId": "_pgojntwqr"
+            },
+            {
+              "answer": "' Это комментарий.",
+              "isCorrect": false,
+              "answerId": "_59ss3bij9"
             }
           ]
         }
       ],
-      "testName": "12345",
-      "id": "_fn5ars5sz"
+      "testName": "JavaScript",
+      "id": "_wpa1dm7yn"
     }
-
   ]
-  
 }

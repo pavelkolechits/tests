@@ -1,30 +1,64 @@
 .container{
-    width: 100vw;
+    width: 100%;
     padding: 10px 15vw;
-    color: #fff;
+    color: #ccc;
     margin:  auto;
-    position: absolute;
+    // position: absolute;
     left: 0;
     right: 0;
-    top: var(--menubarHeight);
-    height: calc(100vh - var(--menubarHeight) - var(--footerHeight));
-    overflow-y: scroll;
-    &::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
-        background-color: #ccc;
-        border: 1px solid #00000050;
-        border-radius: 1px;
-    }
+    // top: var(--menubarHeight);
+    // height: calc(100vh - var(--menubarHeight) - var(--footerHeight));
+    // overflow: scroll;
+    word-break: break-word;
+    
 
-    &::-webkit-scrollbar-thumb {
-        background-color: #4e4040c9;
-        border-radius: 2px;
-    }
 
 }
 
 .checkbox{
     margin: 0 25px 0 0 ;
     font-size: 15px;
+}
+.answer{
+    width: 100%;
+    display: flex;
+    word-break: break-word;
+    margin: 10px 0;
+    border: 1px dashed #cccccc20;
+    border-radius: 10px;
+    padding: 5px;
+    background-color:#00000050;
+    color: #ccc;
+}
+.testName{
+    text-align: center;
+    text-decoration: underline ;
+    
+    color: #ccc;
+    word-break: break-word;
+}
+.countQuestion{
+    text-align: center;
+}
+.wrapQuestion{
+    border: 1px dashed #cccccc20;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #cccccc10;
+    
+}
+.questionName{
+    text-decoration: underline;
+}
+
+.button-wrap__finish{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.button-wrap__next{
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }

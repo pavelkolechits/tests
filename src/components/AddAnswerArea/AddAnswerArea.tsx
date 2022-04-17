@@ -41,7 +41,7 @@ const handleAddAnswer = () => {
           onChange={handleOnChange}
           value={value}
           as="textarea"
-          rows={4}
+          rows={3}
           placeholder="enter a answer"
         />
       </Form.Group>

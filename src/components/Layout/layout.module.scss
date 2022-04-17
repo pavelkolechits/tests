@@ -1,5 +1,26 @@
 .outlet {
-    min-height: calc(100vh - var(--menubarHeight) - var(--footerHeight));
+    height: calc(100vh - var(--menubarHeight) - var(--footerHeight));
     padding: 30px 5px 10px 10px;
-    background-image: url(../background/Background.tsx);
+    position: fixed;
+    left: 0;
+    top: var(menubarHeight);
+    width: 100vw;
+    overflow-y: scroll;
+ 
+    // background:  linear-gradient(296deg, #5b030382 0%, rgb(17 56 39) 72%, #112a2f8c 100%);
+   
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        background-color: #ccc;
+        border: 1px solid #00000000;
+        border-radius: 1px;
+        background-color: #00000000;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #4e4040c9;
+        border-radius: 2px;
+    }
 }

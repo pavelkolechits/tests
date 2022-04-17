@@ -16,7 +16,7 @@ interface GetTestDataTypesSuccess {
   payload: [{ testName: string; test: Array<QuestionItem>; id: string }] 
 }
 
-interface TestTypes {
+export interface TestTypes {
   testName: string;
   id: string;
   test: Array<QuestionItem>;

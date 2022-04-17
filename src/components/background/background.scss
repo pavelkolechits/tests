@@ -1,11 +1,11 @@
 
 $color-bg: #1e1e1e;
-$color-particle: #fff;
+$color-particle: rgba(255, 255, 255, 0.616);
 $spacing: 2560px;
-$time-1: 100s;
-$time-2: 200s;
-$time-3: 700s;
-$time-4: 1000s;
+$time-1: 500s;
+$time-2: 1200s;
+$time-3: 2800s;
+$time-4: 4000s;
 
 
 @function particles($max) {

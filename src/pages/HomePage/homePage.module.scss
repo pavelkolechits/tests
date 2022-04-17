@@ -1,7 +1,18 @@
-.sv{
-    width: 500px;
-    height: 500px;
+.sv-container{
+    width: 100vw;
+    height: calc(100vh - var(--menubarHeight) - var(--footerHeight));
+    background-color: #ffffff50;
     position: fixed;
-    z-index: 1000;
-    background:rebeccapurple;
+    top: var(--menubarHeight);
+    left: 0;
+    padding: 5px;
+ 
+}
+
+.photo{
+    width: 290px;
+    height: 294px;
+    border-radius: 10px;
+    border: 1px solid #000;
+   
 }
