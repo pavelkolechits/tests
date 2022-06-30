@@ -9,7 +9,7 @@ export const HomePage: FC = () => {
   
   return   (
     <div className={styles['sv-container']}>
-        <img className={styles.photo} src={photo} alt="" />
+        
     </div>
   )
  

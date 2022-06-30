@@ -28,10 +28,12 @@ export const Test: FC = () => {
     dispatch({ type: manageTestsActionTypes.GET_TESTS_DATA });
   }
   const handleFinish = () => {
+    console.log([state, stateUserVariant])
     dispatch({
       type: getUserDataActionTypes.COMPARE_RESULTS,
       payload: [state, stateUserVariant]
     });
+   
   };
 
   return (

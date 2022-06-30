@@ -85,8 +85,8 @@ export const createTestReducer = (
     }
 
     case createTestActionTypes.SELECT_ANSWER: {
-
-      let newAnswers = state.questions.filter((i) => i.id === action.payload.questionId)[0]
+      let newAnswers = state.questions
+        .filter((i) => i.id === action.payload.questionId)[0]
         .answers.map((i) =>
           i.answerId === action.payload.answerId
             ? { ...i, isCorrect: !i.isCorrect }
@@ -104,18 +104,15 @@ export const createTestReducer = (
       return { ...state, questions: newQuestions };
     }
     case createTestActionTypes.RELOAD: {
-      
       let newQustions = JSON.parse(localStorage.getItem("createTest") || "");
 
       return { ...state, questions: [...(state.questions = newQustions)] };
     }
     case createTestActionTypes.SAVE_TEST: {
-      
-      return {...state, testName: action.payload.testName }
+      return { ...state, testName: action.payload.testName };
     }
     case createTestActionTypes.RESET_STATE: {
-      
-      return initialState
+      return initialState;
     }
 
     default:

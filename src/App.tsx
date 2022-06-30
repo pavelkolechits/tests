@@ -9,7 +9,7 @@ import { StartTestPage } from "./pages/StartTestPage/StartTestPage";
 import  {useDispatch} from 'react-redux'
 import {createTestActionTypes} from './redux/reducers/createTestReducer/types'
 import { Test } from "./pages/Test/Test";
-
+import { ShowRsultsPage } from "./pages/ShowResultsPage/ShowRsultsPage";
 export const App: FC = () => {
 
   return (
@@ -21,6 +21,7 @@ export const App: FC = () => {
           <Route path="/test/:id" element={<Test/>}/>
           <Route path="/create-test" element={<CreateTestPage />} />
           <Route path="/start-test" element={<StartTestPage />} />
+          <Route path="/results" element={<ShowRsultsPage />} />
         </Route>
       </Routes>
      
